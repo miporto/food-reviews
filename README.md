@@ -1,6 +1,5 @@
 # Fine Food Reviews
-## Predecir el puntaje de los reviews en funcion de sus datos
------------
+### Predecir el puntaje de los reviews en función de sus datos
 
 El objetivo de esta competencia es predecir la cantidad de estrellas de un review en base a los datos del mismo. En general debería ser suficiente usar los campos de texto para poder predecir la valoración de cada review. La valoración es una cantidad de estrellas entre 1 y 5, 1 es el mínimo y 5 el máximo y se aceptan valores no-enteros, por ejemplo 3.14
 
