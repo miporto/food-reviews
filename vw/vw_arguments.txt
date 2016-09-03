@@ -1,0 +1,1 @@
+cat train.vw | vw --cache_file train.cache -f data.model --ngram 2 --skips 2 --decay_learning_rate=.95 --ftrl --passes 300 -b 24 > log.txt
