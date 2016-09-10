@@ -1,4 +1,4 @@
-with open("parsertest.vw") as f:
+with open("csv2vwtest.vw") as f:
 	with open('test.vw', 'w') as new_f:
 		content = f.readlines()
 		

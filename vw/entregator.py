@@ -1,4 +1,4 @@
-with open("rotten.preds.txt") as f:
+with open("preds.txt") as f:
 	with open('preds.csv', 'w') as p:
 		p.write("Id,Prediction\n")
 		content = f.readlines()
