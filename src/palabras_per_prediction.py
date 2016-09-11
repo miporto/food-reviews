@@ -19,6 +19,7 @@ TextIndex = 9
 # PredictionIndex = 3
 
 # Writes data into a csv with a name
+
 def writeDataAsCSV(data, name):
     with open(name, 'w') as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
