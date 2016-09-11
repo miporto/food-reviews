@@ -1,6 +1,5 @@
 import csv
 import operator
-import matplotlib.pyplot as plt
 
 # Indexes
 IdIndex = 0
@@ -19,17 +18,16 @@ TextIndex = 9
 # TextIndex = 2
 # PredictionIndex = 3
 
-def plot(data):
-    values = []
+# Writes data into a csv with a name
+def writeDataAsCSV(data, name):
+    with open(name, 'w') as csvfile:
+        spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
-    for key in data:
-        values.append(key[1])
+        for row in data:
+            spamwriter.writerow(row)
 
-    plt.plot(range(len(data)), values)
-    plt.ylabel('some numbers')
-    plt.show()
 
-with open('food-reviews/csv/train.csv', 'rb') as csvfile:
+with open('../csv/train.csv', 'rb') as csvfile:
     # Read csv file
     reader = csv.reader(csvfile)
 
@@ -58,37 +56,15 @@ with open('food-reviews/csv/train.csv', 'rb') as csvfile:
     sortedPrediction4 = reversed(sorted(wordsByPrediction[4].items(), key=operator.itemgetter(1)))
     sortedPrediction5 = reversed(sorted(wordsByPrediction[5].items(), key=operator.itemgetter(1)))
 
-    with open('sorted_words_by_prediction_1.csv', 'w') as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-
-        for row in sortedPrediction1:
-            spamwriter.writerow(row)
-
-    with open('sorted_words_by_prediction_2.csv', 'w') as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-
-        for row in sortedPrediction2:
-            spamwriter.writerow(row)
-
-    with open('sorted_words_by_prediction_3.csv', 'w') as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-
-        for row in sortedPrediction3:
-            spamwriter.writerow(row)
-
-    with open('sorted_words_by_prediction_4.csv', 'w') as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-
-        for row in sortedPrediction4:
-            spamwriter.writerow(row)
-
-    with open('sorted_words_by_prediction_5.csv', 'w') as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-
-        for row in sortedPrediction5:
-            spamwriter.writerow(row)
-
-
+    writeDataAsCSV(sortedPrediction1, 'hola.csv')
+    # writeDataAsCSV(sortedPrediction2, 'sorted_words_by_prediction_2.csv')
+    # writeDataAsCSV(sortedPrediction3, 'sorted_words_by_prediction_3.csv')
+    # writeDataAsCSV(sortedPrediction4, 'sorted_words_by_prediction_4.csv')
+    # writeDataAsCSV(sortedPrediction5, 'sorted_words_by_prediction_5.csv')
 
 
     # plot(sortedPrediction5)
+
+#reverse the order of a list
+def reverseData(data):
+    return  reversed(sorted(data.items(), key=operator.itemgetter(1)))
