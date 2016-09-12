@@ -2,10 +2,12 @@
 import csv
 import preprocess
 from scipy import spatial
+import time
+import random
 
 
 # Constants
-testTextIndex = 8
+testTextIndex = 9
 
 # Vector prediction charges all the word ranking per prediction in memory
 # and
@@ -61,7 +63,9 @@ def dynamicVectorWithReferenceAndWordRanking(reference, wordRanking):
         # If any word is in my ranking, then is imposible to predict
         # a random vecotr would be a better solution
         if (totalRankingValues == 0):
-            dynamicVector.append(0)
+            randomRankingValues = random.randrange(10) + 1
+            dynamicVector[index] = randomRankingValues
+            totalRankingValues += randomRankingValues
 
         dynamicVector[index] = dynamicVector[index] / float(totalRankingValues)
 
@@ -75,48 +79,69 @@ def main():
     wordRankingPrediction4 = getDictionaryWithCsvName('../csv/sorted_words_by_prediction_4_stemmed.csv')
     wordRankingPrediction5 = getDictionaryWithCsvName('../csv/sorted_words_by_prediction_5_stemmed.csv')
 
-    with open('../csv/test.csv') as testCsv:
+    with open('../csv/train.csv') as testCsv:
         reader = csv.reader(testCsv)
         reader.next()
 
         predictions = []
+        ids = []
+        realPredictions = []
 
         i = 0
 
         for review in reader:
+            realPredictions.append(int(review[6]))
             reviewText = review[testTextIndex]
 
             dynamicVector = dynamicVectorWithText(reviewText)
 
+            startVectors = time.time()
             dynamicVectorFromPrediction1 = dynamicVectorWithReferenceAndWordRanking(dynamicVector[0], wordRankingPrediction1)
             dynamicVectorFromPrediction2 = dynamicVectorWithReferenceAndWordRanking(dynamicVector[0], wordRankingPrediction2)
             dynamicVectorFromPrediction3 = dynamicVectorWithReferenceAndWordRanking(dynamicVector[0], wordRankingPrediction3)
             dynamicVectorFromPrediction4 = dynamicVectorWithReferenceAndWordRanking(dynamicVector[0], wordRankingPrediction4)
             dynamicVectorFromPrediction5 = dynamicVectorWithReferenceAndWordRanking(dynamicVector[0], wordRankingPrediction5)
 
-            distanceToPrediction1 = spatial.distance.cosine(dynamicVector[1], dynamicVectorFromPrediction1)
-            distanceToPrediction2 = spatial.distance.cosine(dynamicVector[1], dynamicVectorFromPrediction2)
-            distanceToPrediction3 = spatial.distance.cosine(dynamicVector[1], dynamicVectorFromPrediction3)
-            distanceToPrediction4 = spatial.distance.cosine(dynamicVector[1], dynamicVectorFromPrediction4)
-            distanceToPrediction5 = spatial.distance.cosine(dynamicVector[1], dynamicVectorFromPrediction5)
+            distanceToPrediction1 = spatial.distance.jaccard(dynamicVector[1], dynamicVectorFromPrediction1)
+            distanceToPrediction2 = spatial.distance.jaccard(dynamicVector[1], dynamicVectorFromPrediction2)
+            distanceToPrediction3 = spatial.distance.jaccard(dynamicVector[1], dynamicVectorFromPrediction3)
+            distanceToPrediction4 = spatial.distance.jaccard(dynamicVector[1], dynamicVectorFromPrediction4)
+            distanceToPrediction5 = spatial.distance.jaccard(dynamicVector[1], dynamicVectorFromPrediction5)
+
 
             distances = [distanceToPrediction1, distanceToPrediction2, distanceToPrediction3, distanceToPrediction4, distanceToPrediction5]
             minDistance = min(distances)
             indexOfMinDistance = distances.index(minDistance) + 1
             predictions.append(indexOfMinDistance)
 
-            print("pregress", i, "prediction", indexOfMinDistance)
+            ids.append(review[0])
+
             i = i + 1
+            if (i % 1000 == 0):
+                print i
+                break
 
+        correctness = 0
+        for index in range(1000):
+            print(predictions[index], realPredictions[index])
+            if predictions[index] == realPredictions[index]:
+                correctness += 1
 
-        with open("dynamic_predictions.csv", 'w') as csvfile:
-            writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        print(correctness)
 
-            writer.writerow(["Id", "Prediction"])
-
-            for index in range(len(predictions)):
-                writer.writerow([index, predictions[index]])
+        # with open("dynamic_predictions.csv", 'w') as csvfile:
+        #     writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        #
+        #     writer.writerow(["Id", "Prediction"])
+        #
+        #     for index in range(len(predictions)):
+        #         writer.writerow([ids[index], predictions[index]])
 
 
 if __name__ == "__main__":
     main()
+
+
+# cosine 341/1000
+# euclidean 336/1000
+# jaccard 88/1000
