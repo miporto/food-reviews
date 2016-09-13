@@ -95,19 +95,17 @@ def main():
 
             dynamicVector = dynamicVectorWithText(reviewText)
 
-            startVectors = time.time()
             dynamicVectorFromPrediction1 = dynamicVectorWithReferenceAndWordRanking(dynamicVector[0], wordRankingPrediction1)
             dynamicVectorFromPrediction2 = dynamicVectorWithReferenceAndWordRanking(dynamicVector[0], wordRankingPrediction2)
             dynamicVectorFromPrediction3 = dynamicVectorWithReferenceAndWordRanking(dynamicVector[0], wordRankingPrediction3)
             dynamicVectorFromPrediction4 = dynamicVectorWithReferenceAndWordRanking(dynamicVector[0], wordRankingPrediction4)
             dynamicVectorFromPrediction5 = dynamicVectorWithReferenceAndWordRanking(dynamicVector[0], wordRankingPrediction5)
 
-            distanceToPrediction1 = spatial.distance.jaccard(dynamicVector[1], dynamicVectorFromPrediction1)
-            distanceToPrediction2 = spatial.distance.jaccard(dynamicVector[1], dynamicVectorFromPrediction2)
-            distanceToPrediction3 = spatial.distance.jaccard(dynamicVector[1], dynamicVectorFromPrediction3)
-            distanceToPrediction4 = spatial.distance.jaccard(dynamicVector[1], dynamicVectorFromPrediction4)
-            distanceToPrediction5 = spatial.distance.jaccard(dynamicVector[1], dynamicVectorFromPrediction5)
-
+            distanceToPrediction1 = spatial.distance.cosine(dynamicVector[1], dynamicVectorFromPrediction1)
+            distanceToPrediction2 = spatial.distance.cosine(dynamicVector[1], dynamicVectorFromPrediction2)
+            distanceToPrediction3 = spatial.distance.cosine(dynamicVector[1], dynamicVectorFromPrediction3)
+            distanceToPrediction4 = spatial.distance.cosine(dynamicVector[1], dynamicVectorFromPrediction4)
+            distanceToPrediction5 = spatial.distance.cosine(dynamicVector[1], dynamicVectorFromPrediction5)
 
             distances = [distanceToPrediction1, distanceToPrediction2, distanceToPrediction3, distanceToPrediction4, distanceToPrediction5]
             minDistance = min(distances)
