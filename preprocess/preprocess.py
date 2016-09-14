@@ -10,7 +10,7 @@ tokenizer = SpaceTokenizer()
 stemmer = PorterStemmer()
 
 pipeline = [
-            lambda s: re.sub('<[^>]*>', '', s),
+            lambda s: re.sub('<[^>]*>', ' ', s),
             lambda s: re.sub('[^\w\s]', '', s),
             lambda s: re.sub('[\d]', '', s),
             lambda s: s.lower(),
