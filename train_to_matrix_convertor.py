@@ -1,8 +1,10 @@
 import csv
 import uuid
 import hashlib
+import sys
 
-train_to_read = 'train.csv'
+
+train_to_read = 'csv/train.csv'
 prime_number = 127
 salt = uuid.uuid4().hex
 
