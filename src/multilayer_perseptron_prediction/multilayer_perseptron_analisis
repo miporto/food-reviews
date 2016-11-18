@@ -1,0 +1,302 @@
+Net ID 1 Correct prediction 28854 total predictions 45377 ratio 0.635872798995
+
+MLPClassifier(activation='relu', alpha=2.04926431411e-05, batch_size='auto',
+       beta_1=0.821917808219, beta_2=0.984682713348, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(77, 36, 29),
+       learning_rate='invscaling', learning_rate_init=0.001, max_iter=200,
+       momentum=0.824931255729, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='sgd', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 2Correct prediction 28925 total predictions 45484 ratio 0.635937912233
+
+MLPClassifier(activation='relu', alpha=1.00839997176e-05, batch_size='auto',
+       beta_1=0.658376005852, beta_2=0.958466453674, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(43, 95, 10),
+       learning_rate='invscaling', learning_rate_init=0.001, max_iter=200,
+       momentum=0.709219858156, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='sgd', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 3 Correct prediction 31729 total predictions 45683 ratio 0.694547205744
+
+MLPClassifier(activation='relu', alpha=1.26428643674e-05, batch_size='auto',
+       beta_1=0.760777683855, beta_2=0.910931174089, early_stopping=False,
+       epsilon=1e-08,
+       hidden_layer_sizes=(89, 34, 56, 93, 85, 13, 57, 95, 86),
+       learning_rate='constant', learning_rate_init=0.001, max_iter=200,
+       momentum=0.85146641438, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='sgd', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 4 Correct prediction 31408 total predictions 45525 ratio 0.689906644701
+
+MLPClassifier(activation='relu', alpha=1.51464663294e-05, batch_size='auto',
+       beta_1=0.653594771242, beta_2=0.940438871473, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(40, 61, 73, 56, 30, 71, 40, 72),
+       learning_rate='adaptive', learning_rate_init=0.001, max_iter=200,
+       momentum=0.927835051546, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='sgd', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 5 Correct prediction 29921 total predictions 45766 ratio 0.653782283791
+
+MLPClassifier(activation='relu', alpha=1.08981135365e-05, batch_size='auto',
+       beta_1=0.863723608445, beta_2=0.97192224622, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(35,), learning_rate='adaptive',
+       learning_rate_init=0.001, max_iter=200, momentum=0.732899022801,
+       nesterovs_momentum=True, power_t=0.5, random_state=1, shuffle=True,
+       solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=True,
+       warm_start=False)
+
+Net ID 6 Correct prediction 30965 total predictions 45302 ratio 0.683523906229
+
+MLPClassifier(activation='relu', alpha=1.38661637871e-05, batch_size='auto',
+       beta_1=0.775862068966, beta_2=0.96463022508, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(29, 92, 51, 25, 79),
+       learning_rate='adaptive', learning_rate_init=0.001, max_iter=200,
+       momentum=0.693909020817, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='adam', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 7 Correct prediction 31601 total predictions 45464 ratio 0.695077423896
+
+MLPClassifier(activation='relu', alpha=9.69838037048e-05, batch_size='auto',
+       beta_1=0.751252086811, beta_2=0.96256684492, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(84, 13, 84, 70, 54, 69, 28, 72),
+       learning_rate='constant', learning_rate_init=0.001, max_iter=200,
+       momentum=0.649350649351, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='adam', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 8 Correct prediction 29244 total predictions 45468 ratio 0.643177619425
+
+MLPClassifier(activation='relu', alpha=1.49550600446e-05, batch_size='auto',
+       beta_1=0.647948164147, beta_2=0.918367346939, early_stopping=False,
+       epsilon=1e-08,
+       hidden_layer_sizes=(62, 89, 10, 75, 17, 63, 88, 30, 55),
+       learning_rate='invscaling', learning_rate_init=0.001, max_iter=200,
+       momentum=0.931677018634, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='lbfgs', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 9 Correct prediction 30819 total predictions 45533 ratio 0.676849757319
+
+MLPClassifier(activation='relu', alpha=2.31010903715e-05, batch_size='auto',
+       beta_1=0.675168792198, beta_2=0.968783638321, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(93, 79, 26),
+       learning_rate='adaptive', learning_rate_init=0.001, max_iter=200,
+       momentum=0.739523418242, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='sgd', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 10 Correct prediction 30484 total predictions 45486 ratio 0.670184232511
+
+MLPClassifier(activation='relu', alpha=1.81478322414e-05, batch_size='auto',
+       beta_1=0.679245283019, beta_2=0.901803607214, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(62, 82, 42, 37, 19),
+       learning_rate='adaptive', learning_rate_init=0.001, max_iter=200,
+       momentum=0.709219858156, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='sgd', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 11 Correct prediction 31301 total predictions 45462 ratio 0.68850908451
+
+MLPClassifier(activation='relu', alpha=6.4242579982e-05, batch_size='auto',
+       beta_1=0.739523418242, beta_2=0.977198697068, early_stopping=False,
+       epsilon=1e-08,
+       hidden_layer_sizes=(33, 17, 79, 50, 71, 41, 79, 40, 28),
+       learning_rate='adaptive', learning_rate_init=0.001, max_iter=200,
+       momentum=0.886699507389, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='adam', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 12 Correct prediction 29489 total predictions 45368 ratio 0.649995591606
+
+MLPClassifier(activation='relu', alpha=1.89800140452e-05, batch_size='auto',
+       beta_1=0.904522613065, beta_2=0.959488272921, early_stopping=False,
+       epsilon=1e-08,
+       hidden_layer_sizes=(54, 17, 90, 21, 23, 37, 50, 33, 86),
+       learning_rate='adaptive', learning_rate_init=0.001, max_iter=200,
+       momentum=0.769230769231, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='lbfgs', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 13 Correct prediction 29411 total predictions 45454 ratio 0.647049764597
+
+MLPClassifier(activation='relu', alpha=2.24170010536e-05, batch_size='auto',
+       beta_1=0.818926296633, beta_2=0.950369588173, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(73, 42, 36, 47, 40, 35, 55, 28),
+       learning_rate='invscaling', learning_rate_init=0.001, max_iter=200,
+       momentum=0.861244019139, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='lbfgs', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 14 Correct prediction 31178 total predictions 45788 ratio 0.680920765266
+
+MLPClassifier(activation='relu', alpha=2.56963716723e-05, batch_size='auto',
+       beta_1=0.696055684455, beta_2=0.928792569659, early_stopping=False,
+       epsilon=1e-08,
+       hidden_layer_sizes=(75, 31, 66, 65, 44, 81, 58, 49, 84),
+       learning_rate='invscaling', learning_rate_init=0.001, max_iter=200,
+       momentum=0.673148840688, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='adam', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 15 Correct prediction 29559 total predictions 45396 ratio 0.651136664023
+
+MLPClassifier(activation='relu', alpha=4.44247001333e-05, batch_size='auto',
+       beta_1=0.839552238806, beta_2=0.934579439252, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(28, 88, 29, 59, 18, 87),
+       learning_rate='invscaling', learning_rate_init=0.001, max_iter=200,
+       momentum=0.648414985591, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='lbfgs', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 16 Correct prediction 29949 total predictions 45404 ratio 0.659611487975
+
+MLPClassifier(activation='relu', alpha=1.87874574934e-05, batch_size='auto',
+       beta_1=0.695517774343, beta_2=0.936524453694, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(41, 64),
+       learning_rate='invscaling', learning_rate_init=0.001, max_iter=200,
+       momentum=0.679245283019, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='lbfgs', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+
+
+Net ID 25 Correct prediction 33774 total predictions 45468 ratio 0.742808128794
+
+MLPClassifier(activation='relu', alpha=6.4603656567e-05, batch_size='auto',
+       beta_1=0.762066045724, beta_2=0.9977827051, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(82, 63, 62, 82, 84, 14, 17, 94),
+       learning_rate='adaptive', learning_rate_init=0.001, max_iter=200,
+       momentum=0.802854594112, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='adam', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 17 Correct prediction 32056 total predictions 45559 ratio 0.703615092517
+
+MLPClassifier(activation='relu', alpha=1.81461856718e-05, batch_size='auto',
+      beta_1=0.647482014388, beta_2=0.9977827051, early_stopping=False,
+      epsilon=1e-08, hidden_layer_sizes=(35, 73, 90, 24, 47, 66, 18, 38),
+      learning_rate='constant', learning_rate_init=0.001, max_iter=200,
+      momentum=0.648414985591, nesterovs_momentum=True, power_t=0.5,
+      random_state=1, shuffle=True, solver='adam', tol=0.0001,
+      validation_fraction=0.1, verbose=True, warm_start=False)
+
+
+Net ID 22 Correct prediction 31422 total predictions 45483 ratio 0.690851526944
+
+MLPClassifier(activation='relu', alpha=1.14768397374e-05, batch_size='auto',
+      beta_1=0.841908325538, beta_2=0.903614457831, early_stopping=False,
+      epsilon=1e-08, hidden_layer_sizes=(76, 70, 26, 94, 30, 40),
+      learning_rate='constant', learning_rate_init=0.001, max_iter=200,
+      momentum=0.693909020817, nesterovs_momentum=True, power_t=0.5,
+      random_state=1, shuffle=True, solver='adam', tol=0.0001,
+      validation_fraction=0.1, verbose=True, warm_start=False)
+
+
+Net ID 23 Correct prediction 31296 total predictions 45454 ratio 0.688520262243
+
+MLPClassifier(activation='relu', alpha=2.36261399613e-05, batch_size='auto',
+      beta_1=0.841121495327, beta_2=0.935550935551, early_stopping=False,
+      epsilon=1e-08, hidden_layer_sizes=(84, 18, 87),
+      learning_rate='invscaling', learning_rate_init=0.001, max_iter=200,
+      momentum=0.946372239748, nesterovs_momentum=True, power_t=0.5,
+      random_state=1, shuffle=True, solver='adam', tol=0.0001,
+      validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 18 Correct prediction 30899 total predictions 45265 ratio 0.68262454435
+
+MLPClassifier(activation='relu', alpha=1.22521992698e-05, batch_size='auto',
+       beta_1=0.995575221239, beta_2=0.968783638321, early_stopping=False,
+       epsilon=1e-08,
+       hidden_layer_sizes=(56, 31, 78, 46, 15, 83, 20, 85, 47),
+       learning_rate='adaptive', learning_rate_init=0.001, max_iter=200,
+       momentum=0.910931174089, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='sgd', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+
+Net ID 27 Correct prediction 30757 total predictions 45552 ratio 0.675206357569
+
+MLPClassifier(activation='relu', alpha=1.70639728342e-05, batch_size='auto',
+       beta_1=0.958466453674, beta_2=0.993377483444, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(28, 21, 86, 49, 24),
+       learning_rate='invscaling', learning_rate_init=0.001, max_iter=200,
+       momentum=0.694980694981, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='adam', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+       Net ID 21 Correct prediction 30452 total predictions 45373 ratio 0.671148039583
+
+MLPClassifier(activation='relu', alpha=1.0774701002e-05, batch_size='auto',
+      beta_1=0.9, beta_2=0.924024640657, early_stopping=False,
+      epsilon=1e-08, hidden_layer_sizes=(98,), learning_rate='constant',
+      learning_rate_init=0.001, max_iter=200, momentum=0.972972972973,
+      nesterovs_momentum=True, power_t=0.5, random_state=1, shuffle=True,
+      solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=True,
+      warm_start=False)
+
+Net ID 19 Correct prediction 30438 total predictions 45511 ratio 0.668805343763
+
+MLPClassifier(activation='relu', alpha=0.000121966093426, batch_size='auto',
+       beta_1=0.706991358995, beta_2=0.902708124373, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(45, 93, 51, 62, 19, 79, 82, 83),
+       learning_rate='constant', learning_rate_init=0.001, max_iter=200,
+       momentum=0.747508305648, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='sgd', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+
+Net ID 24 Correct prediction 29910 total predictions 45460 ratio 0.657941047074
+
+MLPClassifier(activation='relu', alpha=1.41928524795e-05, batch_size='auto',
+      beta_1=0.998890122087, beta_2=0.953389830508, early_stopping=False,
+      epsilon=1e-08, hidden_layer_sizes=(76, 16, 59, 44),
+      learning_rate='constant', learning_rate_init=0.001, max_iter=200,
+      momentum=0.674157303371, nesterovs_momentum=True, power_t=0.5,
+      random_state=1, shuffle=True, solver='lbfgs', tol=0.0001,
+      validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 20 Correct prediction 29956 total predictions 45660 ratio 0.656066579063
+
+MLPClassifier(activation='relu', alpha=1.36544868644e-05, batch_size='auto',
+       beta_1=0.913705583756, beta_2=0.904522613065, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(53, 93, 76, 20, 95),
+       learning_rate='adaptive', learning_rate_init=0.001, max_iter=200,
+       momentum=0.821917808219, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='lbfgs', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+
+Net ID 28 Correct prediction 29527 total predictions 45478 ratio 0.649258982365
+
+MLPClassifier(activation='relu', alpha=1.29844835422e-05, batch_size='auto',
+       beta_1=0.998890122087, beta_2=0.945378151261, early_stopping=False,
+       epsilon=1e-08, hidden_layer_sizes=(27, 82, 36),
+       learning_rate='constant', learning_rate_init=0.001, max_iter=200,
+       momentum=0.805008944544, nesterovs_momentum=True, power_t=0.5,
+       random_state=1, shuffle=True, solver='sgd', tol=0.0001,
+       validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 0 Correct prediction 29199 total predictions 45542 ratio 0.641144438101
+
+MLPClassifier(activation='relu', alpha=4.55539358601e-05, batch_size='auto',
+      beta_1=0.74318744839, beta_2=0.900900900901, early_stopping=False,
+      epsilon=1e-08, hidden_layer_sizes=(84, 15, 60, 19, 78, 62, 23),
+      learning_rate='invscaling', learning_rate_init=0.001, max_iter=200,
+      momentum=0.651230101302, nesterovs_momentum=True, power_t=0.5,
+      random_state=1, shuffle=True, solver='sgd', tol=0.0001,
+      validation_fraction=0.1, verbose=True, warm_start=False)
+
+Net ID 26 Correct prediction 29020 total predictions 45464 ratio 0.638307232096
+
+MLPClassifier(activation='relu', alpha=2.21121528392e-05, batch_size='auto',
+     beta_1=0.657894736842, beta_2=0.970873786408, early_stopping=False,
+     epsilon=1e-08, hidden_layer_sizes=(87, 16, 91, 56, 50, 89, 82, 87),
+     learning_rate='invscaling', learning_rate_init=0.001, max_iter=200,
+     momentum=0.689655172414, nesterovs_momentum=True, power_t=0.5,
+     random_state=1, shuffle=True, solver='sgd', tol=0.0001,
+     validation_fraction=0.1, verbose=True, warm_start=False)
