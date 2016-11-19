@@ -1,4 +1,3 @@
-data/train.csv
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -90,5 +89,9 @@ food-env/
 # Rope project settings
 .ropeproject
 
+# Data sets
 csv/
 data/
+
+# Cosas de macs
+.DS_Store
