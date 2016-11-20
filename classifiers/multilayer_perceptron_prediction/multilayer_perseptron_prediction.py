@@ -5,10 +5,10 @@ import csv
 import random as rd
 
 def makeKaggleSubmition():
-    clf = joblib.load('newral_network_max_iterations_40.pkl')
+    clf = joblib.load('newral_network_max_iterations_17.pkl')
 
     # Open the file with the registers
-    with open("../../data/matrix_of_word_frequency_test2.csv", "r") as csvfile, open("../../data/kaggle.csv", "w") as kaggle:
+    with open("../../data/matrix_of_word_frequency_test2.csv", "r") as csvfile, open("../../data/kaggle17.csv", "w") as kaggle:
         firstValue = True
         for row in csv.reader(csvfile):
             if firstValue:
@@ -52,7 +52,8 @@ def crossValidateWithTest():
         print clf
 
 def main():
-    crossValidateWithTest()
+    makeKaggleSubmition()
+    #crossValidateWithTest()
     return 0
 
 if __name__ == "__main__":
