@@ -33,21 +33,25 @@ def train_tree(df):
     dt.fit(X, Y)
     return dt
 
-df = pd.read_csv("../../data/trainvec.csv", nrows=10000)
+df = pd.read_csv("../../data/trainvec.csv")
 dt = train_tree(df)
 # Persist tree
 pickle.dump(dt, open('tree.p', 'wb'))
 features = list(df.columns[2:])
 Y = df["Prediction"]
 X = df[features] 
-scores = cross_val_score(dt, X, Y, cv=5)
-print(scores)
+#scores = cross_val_score(dt, X, Y, cv=5)
+#print(scores)
 #dt2 = pickle.load(open('tree.p', 'rb'))
 
 #test = np.array(X.values.tolist()[0]).reshape(1,-1)
-df_test = pd.read_csv("../../data/testvec.csv", nrows=10)
+df_test = pd.read_csv("../../data/testvec.csv")
 test = df_test[list(df_test.columns[1:])]
-print(dt.predict(test))
+preds = dt.predict(test)
+df_preds = pd.DataFrame(preds, columns=["Prediction"])
+df_kaggle = pd.concat([df_test["Id"], df_preds["Prediction"]], axis=1, keys=["Id", "Prediction"])
+#print(df_kaggle.head(4))
+df_kaggle.to_csv("dtree_def.csv", index=False)
 #visualize_tree(dt, features)
 
 
