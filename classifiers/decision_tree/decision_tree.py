@@ -51,8 +51,8 @@ preds = dt.predict(test)
 df_preds = pd.DataFrame(preds, columns=["Prediction"])
 df_kaggle = pd.concat([df_test["Id"], df_preds["Prediction"]], axis=1, keys=["Id", "Prediction"])
 #print(df_kaggle.head(4))
-df_kaggle.to_csv("dtree_def.csv", index=False)
-#visualize_tree(dt, features)
+df_kaggle.to_csv("dtree.csv", index=False)
+visualize_tree(dt, features)
 
 
 #parameters = {'max_depth':range(1,20)}
