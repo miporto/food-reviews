@@ -14,9 +14,9 @@ def hashing_trick_summarytext(train_to_read, output, test=False):
 	with open(train_to_read) as csvReadfile:
 		with open(output, 'w') as csvWritefile:
 			if (test):
-				fieldnames = ['Id']	
+				fieldnames = ['Id'] + list(range(prime_number))
 			else:
-				fieldnames = ['Id', 'Prediction']
+				fieldnames = ['Id', 'Prediction'] + list(range(prime_number))
 			writer = csv.DictWriter(csvWritefile, fieldnames=fieldnames)
 
 			writer.writeheader()
