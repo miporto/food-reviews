@@ -44,7 +44,6 @@ matrix = []
 weights = []
 predictions = []
 number_of_dimension = prime_number
-salt = uuid.uuid4().hex
 
 print ('start reading csv file')
 start_time = time.time()
@@ -57,11 +56,11 @@ with open(train_to_read) as csvReadfile:
 
         text = row['Text']
         for word in text.split():
-            hashed_number = (int(hashlib.sha256(salt.encode() + word.encode()).hexdigest(), 16) % prime_number)
+            hashed_number = int(hash(word.encode()) % prime_number)
             hash_array[hashed_number] += 1
 
         matrix.append([0 for x in range(3)])
-        matrix[row_count][0] = row['ProductId'].split()[0]
+        matrix[row_count][0] = row['Id'].split()[0]
         number_to_predict = int(row['Prediction'].split()[0])
         if number_to_predict == 1 or number_to_predict == 2:
             matrix[row_count][1] = 0
